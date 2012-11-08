@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<enemy_stats>
+
+<!-- //////////////////////////////
+           ENEMY STATS          
+     //////////////////////////////-->	
+	
+	<!-- Enemy 1  -->
+	<enemy>
+	<object name="Name">Enemy_1</object>
+	<object name="HP">1</object>
+	<object name="Attack">1</object>
+	<object name="Speed">2.6</object>
+	</enemy>
+	
+	<!-- Enemy 2  -->
+	<enemy>
+	<object name="Name">Enemy_2</object>
+	<object name="HP">2</object>
+	<object name="Attack">1</object>
+	<object name="Speed">1.3</object>
+	</enemy>
+	
+	<!-- Enemy 3  -->
+	<enemy>
+	<object name="Name">Enemy_3</object>
+	<object name="HP">1</object>
+	<object name="Attack">1</object>
+	<object name="Speed">1.3</object>
+	</enemy>
+	
+	<!-- Enemy 4  -->
+	<enemy>
+	<object name="Name">Enemy_4</object>
+	<object name="HP">2</object>
+	<object name="Attack">1</object>
+	<object name="Speed">1.3</object>
+	</enemy>
+	
+	<!-- Enemy 5  -->
+	<enemy>	
+	<object name="Name">Enemy_5</object>
+	<object name="HP">3</object>
+	<object name="Attack">1</object>
+	<object name="Speed">1.3</object>
+	</enemy>
+
+</enemy_stats>	

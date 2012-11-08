@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<weapon_stats>
+
+<!-- //////////////////////////////
+           WEAPON STATS          
+     //////////////////////////////-->	
+	
+	<!-- Five Seven  -->
+	<gun>
+	<object name="Name">Five_Seven</object>
+	<object name="Damage">50</object>
+	<object name="Ammo">7</object>
+	<object name="Fire_Rate">0.6</object>
+	<object name="Range">25</object>
+	<object name="Spray">1</object>
+	<object name="Splash">0</object>
+	</gun>
+	
+	<!-- UZI  -->
+	<gun>
+	<object name="Name">UZI</object>
+	<object name="Damage">25</object>
+	<object name="Ammo">30</object>
+	<object name="Fire_Rate">0.1</object>
+	<object name="Range">20</object>
+	<object name="Spray">1</object>
+	<object name="Splash">0</object>
+	</gun>
+	
+	<!-- 12 Gauge  -->
+	<gun>
+	<object name="Name">12_Gauge</object>
+	<object name="Damage">20</object>
+	<object name="Ammo">5</object>
+	<object name="Fire_Rate">1</object>
+	<object name="Range">12</object>
+	<object name="Spray">5</object>
+	<object name="Splash">0</object>
+	</gun>
+
+	<!-- AK-47  -->
+	<gun>
+	<object name="Name">AK-47</object>
+	<object name="Damage">100</object>
+	<object name="Ammo">25</object>
+	<object name="Fire_Rate">0.35</object>
+	<object name="Range">35</object>
+	<object name="Spray">1</object>
+	<object name="Splash">0</object>
+	</gun>
+	
+	<!-- Schmidt Scout  -->
+	<gun>
+	<object name="Name">Schmidt_Scout</object>
+	<object name="Damage">500</object>
+	<object name="Ammo">12</object>
+	<object name="Fire_Rate">1</object>
+	<object name="Range">50</object>
+	<object name="Spray">1</object>
+	<object name="Splash">0</object>
+	</gun>
+	
+	<!-- M249 SAW  -->
+	<gun>
+	<object name="Name">M249 SAW</object>
+	<object name="Damage">75</object>
+	<object name="Ammo">100</object>
+	<object name="Fire_Rate">0.1</object>
+	<object name="Range">30</object>
+	<object name="Spray">1</object>
+	<object name="Splash">0</object>
+	</gun>
+	
+
+</weapon_stats>	

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- //////////////////////////////
+           LEVEL STATS          
+     //////////////////////////////-->
+<level_stats>
+	
+	<!-- Level 1 -->
+	<level>
+	<object name="Level_Name">Day One</object>
+	<!-- Enemies per wave, 1 = true, 0 = false -->
+	<wave name="enemy1">1</wave>
+	<wave name="enemy2">0</wave>
+	<wave name="enemy3">0</wave>
+	<wave name="enemy4">0</wave>
+	<wave name="enemy5">0</wave>
+	</level>
+	
+	<!-- Level 2 -->
+	<level>
+	<object name="Level_Name">Day Two</object>
+	<!-- Enemies per wave, 1 = true, 0 = false -->
+	<wave name="enemy1">1</wave>
+	<wave name="enemy2">1</wave>
+	<wave name="enemy3">0</wave>
+	<wave name="enemy4">0</wave>
+	<wave name="enemy5">0</wave>
+	</level>
+	
+	<!-- Level 3 -->
+	<level>
+	<object name="Level_Name">Day Three</object>
+	<!-- Enemies per wave, 1 = true, 0 = false -->
+	<wave name="enemy1">1</wave>
+	<wave name="enemy2">1</wave>
+	<wave name="enemy3">1</wave>
+	<wave name="enemy4">0</wave>
+	<wave name="enemy5">0</wave>
+	</level>
+	
+	<!-- Level 4 -->
+	<level>
+	<object name="Level_Name">Day Four</object>
+	<!-- Enemies per wave, 1 = true, 0 = false -->
+	<wave name="enemy1">1</wave>
+	<wave name="enemy2">1</wave>
+	<wave name="enemy3">1</wave>
+	<wave name="enemy4">1</wave>
+	<wave name="enemy5">0</wave>
+	</level>
+	
+	<!-- Level 5 -->
+	<level>
+	<object name="Level_Name">Day Five</object>
+	<!-- Enemies per wave, 1 = true, 0 = false -->
+	<wave name="enemy1">1</wave>
+	<wave name="enemy2">1</wave>
+	<wave name="enemy3">1</wave>
+	<wave name="enemy4">1</wave>
+	<wave name="enemy5">1</wave>
+	</level>
+    
+</level_stats>

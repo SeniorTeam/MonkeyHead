@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{B3B5C9C0-BA49-C5A0-00CC-5A9657423423}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_3_5_6;UNITY_3_5;UNITY_EDITOR;ENABLE_PROFILER;UNITY_STANDALONE_OSX;ENABLE_GENERICS;ENABLE_DUCK_TYPING;ENABLE_TERRAIN;ENABLE_MOVIES;ENABLE_WEBCAM;ENABLE_MICROPHONE;ENABLE_NETWORK;ENABLE_CLOTH;ENABLE_WWW;ENABLE_SUBSTANCE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="UnityEngine">
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Game\Scripts\Enemy\Enemy.cs" />
+     <Compile Include="Assets\Game\Scripts\Enemy\Enemy_Sight.cs" />
+     <Compile Include="Assets\Game\Scripts\Hud\CrossHair.cs" />
+     <Compile Include="Assets\Game\Scripts\Hud\HudInventory.cs" />
+     <Compile Include="Assets\Game\Scripts\Jail Cell\CellDoorOpen.cs" />
+     <Compile Include="Assets\Game\Scripts\Jail Cell\JailCellCamera.cs" />
+     <Compile Include="Assets\Game\Scripts\Lights\LightFlicker.cs" />
+     <Compile Include="Assets\Game\Scripts\Lights\LightManager.cs" />
+     <Compile Include="Assets\Game\Scripts\Other\Game.cs" />
+     <Compile Include="Assets\Game\Scripts\Other\Inventory.cs" />
+     <Compile Include="Assets\Game\Scripts\Other\Particle_AutoDestruct.cs" />
+     <Compile Include="Assets\Game\Scripts\Player\CharacterMotor.cs" />
+     <Compile Include="Assets\Game\Scripts\Player\HeadMovement.cs" />
+     <Compile Include="Assets\Game\Scripts\Player\MouseLook.cs" />
+     <Compile Include="Assets\Game\Scripts\Player\PlayerAnimationEventSystem.cs" />
+     <Compile Include="Assets\Game\Scripts\Player\Player_InputManager.cs" />
+     <Compile Include="Assets\Game\Scripts\Weapons\Bullet.cs" />
+     <Compile Include="Assets\Game\Scripts\Weapons\Gun.cs" />
+     <Compile Include="Assets\Game\Scripts\Weapons\Weapon.cs" />
+     <Compile Include="Assets\Game\Scripts\Weapons\WeaponManager.cs" />
+     <Compile Include="Assets\Menu\Scripts\LogoLoad.cs" />
+     <Compile Include="Assets\Menu\Scripts\MainMenu.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AIFollow.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Core\AI\AIPath.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Core\AI\NavmeshController.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Core\AI\Seeker.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Core\AstarData.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Core\AstarMath.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Core\AstarPath.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Core\BinaryHeap.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Core\GraphEditorBase.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Core\GraphLoaderHistory\AstarSerialize.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Core\GraphLoaderHistory\AstarSerializer3_01.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Core\GraphLoaderHistory\AstarSerializer3_04.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Core\GraphLoaderHistory\AstarSerializer3_05.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Core\GraphLoaderHistory\AstarSerializer3_07.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Core\GraphUpdateScene.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Core\GraphUpdateShape.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Core\Int3.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Core\JsonConverters.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Core\JsonSerializer.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Core\MultithreadClasses.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Core\Node.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Core\NodeLink.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Core\astarclasses.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Generators\Base.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Generators\GridGenerator.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Generators\NavMeshGenerator.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Generators\NodeClasses\GridNode.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Generators\NodeClasses\MeshNode.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Generators\PointGenerator.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Generators\Utilities\BBTree.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Generators\Utilities\Huffman.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Generators\Utilities\NavMeshRenderer.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Generators\Utilities\ObjImporter.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Modifiers\AlternativePath.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Modifiers\FunnelModifier.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Modifiers\Modifiers.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Modifiers\RaycastModifier.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Modifiers\SimpleSmoothModifier.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Modifiers\StartEndModifier.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Pathfinders\CleanupPath65K.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Pathfinders\Path.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Utilities\AstarProfiler.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Utilities\Checksum.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Utilities\DotNetReplacements.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Utilities\GraphUpdateUtilities.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Utilities\LockFreeStack.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Utilities\ObjExporter.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Utilities\Parallel.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Utilities\SizeProfiler.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Utilities\UnityReferenceHelper.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\changelog.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\DoorController.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\DynamicGridObstacle.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\MineBotAI.cs" />
+     <Compile Include="Assets\z_Packages\AStar Pathfinding\ShadowAlign.cs" />
+     <None Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Editor\EditorAssets\Materials\Navmesh2.shader" />
+     <None Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Plugins\DotNetZip\License.txt" />
+     <None Include="Assets\z_Packages\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
+     <None Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Editor\EditorAssets\Materials\Navmesh.shader" />
+     <None Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Plugins\dependencies.txt" />
+     <None Include="Assets\Game\Scripts\Weapons\WeaponStats.xml" />
+     <None Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\link.xml" />
+     <None Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Plugins\JsonFx\License.txt" />
+     <None Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Plugins\JsonFx\Readme.txt" />
+ <Reference Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Plugins\DotNetZip\Ionic.Zip.Reduced">
+ <HintPath>Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Plugins\DotNetZip\Ionic.Zip.Reduced.dll</HintPath>
+ </Reference>
+ <Reference Include="Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Plugins\JsonFx\JsonFx.Json">
+ <HintPath>Assets\z_Packages\AStar Pathfinding\AstarPathfindingProject\Plugins\JsonFx\JsonFx.Json.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>

@@ -1,0 +1,37 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Enemy\Enemy.cs">
+    <Files>
+      <File FileName="Assets\Scripts\Enemy\Enemy.cs" Line="95" Column="63" />
+      <File FileName="Assets\Scripts\Other\Game.cs" Line="23" Column="1" />
+      <File FileName="c:\Users\michael.lepore\Desktop\Horror Concept\Assets\Scripts\Player\Mine\MouseLook.cs" Line="130" Column="7" />
+      <File FileName="c:\Users\michael.lepore\Desktop\Horror Concept\Assets\Scripts\Weapons\Inventory.cs" Line="140" Column="5" />
+      <File FileName="Assets\Scripts\Weapons\Weapon.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Player\Mine\Player_InputManager.cs" Line="7" Column="33" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Assembly-CSharp" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="Enemy" expanded="True">
+                  <Node name="Enemy.cs" selected="True" />
+                </Node>
+                <Node name="Other" expanded="True" />
+                <Node name="Player" expanded="True">
+                  <Node name="Mine" expanded="True" />
+                </Node>
+                <Node name="Weapons" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

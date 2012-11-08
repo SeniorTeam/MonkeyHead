@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<enemy_stats>
+
+<!-- //////////////////////////////
+           ENEMY STATS          
+     //////////////////////////////-->	
+	
+	<!-- Enemy 1  -->
+	<enemy>
+	<object name="Name">Enemy_1</object>
+	<object name="HP">100</object>
+	<object name="Speed">2.0</object>
+	<object name="Attack">1.0</object>
+	<object name="Size">1.0</object>
+	<object name="Spawn_Time">2</object>
+	</enemy>
+	
+	<!-- Enemy 2  -->
+	<enemy>
+	<object name="Name">Enemy_2</object>
+	<object name="HP">120</object>
+	<object name="Speed">0.03</object>
+	<object name="Attack">1.0</object>
+	<object name="Size">1.0</object>
+	<object name="Spawn_Time">3</object>
+	</enemy>
+	
+	<!-- Enemy 3  -->
+	<enemy>
+	<object name="Name">Enemy_3</object>
+	<object name="HP">140</object>
+	<object name="Speed">0.07</object>
+	<object name="Attack">1.0</object>
+	<object name="Size">1.0</object>
+	<object name="Spawn_Time">1</object>
+	</enemy>
+	
+	<!-- Enemy 4  -->
+	<enemy>
+	<object name="Name">Enemy_4</object>
+	<object name="HP">160</object>
+	<object name="Speed">0.01</object>
+	<object name="Attack">1.0</object>
+	<object name="Size">1.0</object>
+	<object name="Spawn_Time">5</object>
+	</enemy>
+	
+	<!-- Enemy 5  -->
+	<enemy>	
+	<object name="Name">Enemy_5</object>
+	<object name="HP">180</object>
+	<object name="Speed">0.04</object>
+	<object name="Attack">1.0</object>
+	<object name="Size">1.0</object>
+	<object name="Spawn_Time">8</object>
+	</enemy>
+	
+	
+	
+<!-- //////////////////////////////
+           BOSS STATS          
+     //////////////////////////////-->
+	
+	<!-- T-Pain  -->
+	<boss>
+	<object name="Name">T-Pain</object>
+	<object name="HP">100</object>
+	<object name="Speed">1.0</object>
+	<object name="Attack">1.0</object>
+	</boss>
+	
+	<!-- Kanye West  -->
+	<boss>
+	<object name="Name">Kanye West</object>
+	<object name="HP">120</object>
+	<object name="Speed">1.0</object>
+	<object name="Attack">1.0</object>
+	</boss>
+
+</enemy_stats>	

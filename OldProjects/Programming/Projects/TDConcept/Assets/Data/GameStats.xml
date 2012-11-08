@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<game_stats>
+	
+	<!-- //////////////////////////////
+           SPAWN STATS          
+     //////////////////////////////-->
+	
+	<!-- Time 1 -->
+	<spawn>
+	<object name="Low">1</object>
+	<object name="High">3</object>		
+	</spawn>
+			
+	<!-- Time 2 -->
+	<spawn>
+	<object name="Low">2</object>
+	<object name="High">4</object>		
+	</spawn>
+
+	<!-- Time 3 -->
+	<spawn>
+	<object name="Low">3</object>
+	<object name="High">5</object>		
+	</spawn>
+
+	<!-- Time 4 -->
+	<spawn>
+	<object name="Low">4</object>
+	<object name="High">6</object>		
+	</spawn>
+
+	<!-- Time 5 -->
+	<spawn>
+	<object name="Low">5</object>
+	<object name="High">7</object>		
+	</spawn>
+
+	<!-- Time 6 -->
+	<spawn>
+	<object name="Low">6</object>
+	<object name="High">8</object>		
+	</spawn>
+			
+	<!-- Time 7 -->
+	<spawn>
+	<object name="Low">7</object>
+	<object name="High">9</object>		
+	</spawn>
+
+	<!-- Time 8 -->
+	<spawn>
+	<object name="Low">8</object>
+	<object name="High">10</object>		
+	</spawn>
+
+	<!-- Time 9 -->
+	<spawn>
+	<object name="Low">9</object>
+	<object name="High">11</object>		
+	</spawn>
+
+	<!-- Time 10 -->
+	<spawn>
+	<object name="Low">10</object>
+	<object name="High">12</object>		
+	</spawn>			
+    
+</game_stats>	
