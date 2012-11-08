@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<weapon_stats>
+
+<!-- //////////////////////////////
+           WEAPON STATS          
+     //////////////////////////////-->	
+	
+	<!-- Five Seven  -->
+	<weapon>
+	<object name="Name">Five Seven</object>
+	<object name="Type">Gun</object>
+	<object name="Ammo">40</object>
+	<object name="Clips">2</object>
+	<object name="Damage">20</object>
+	<object name="Fire_Rate">0.2</object>
+	<object name="Range">25</object>
+	<object name="Splash">0</object>
+	<object name="Spray">1</object>
+	</weapon>
+	
+	<!-- Axe  -->
+	<weapon>
+	<object name="Name">Axe</object>
+	<object name="Type">Mele</object>
+	<object name="Ammo">7</object>
+	<object name="Clips">0</object>
+	<object name="Damage">50</object>
+	<object name="Fire_Rate">0</object>
+	<object name="Range">0</object>
+	<object name="Splash">0</object>
+	<object name="Spray">0</object>
+	</weapon>
+	
+	<!-- Glass Bottle  -->
+	<weapon>
+	<object name="Name">Glass Bottle</object>
+	<object name="Type">Mele</object>
+	<object name="Ammo">7</object>
+	<object name="Clips">0</object>
+	<object name="Damage">50</object>
+	<object name="Fire_Rate">0</object>
+	<object name="Range">0</object>
+	<object name="Splash">0</object>
+	<object name="Spray">0</object>
+	</weapon>
+
+	<!--  Pipe  -->
+	<weapon>
+	<object name="Name">Pipe</object>
+	<object name="Type">Mele</object>
+	<object name="Ammo">7</object>
+	<object name="Clips">0</object>
+	<object name="Damage">50</object>
+	<object name="Fire_Rate">0</object>
+	<object name="Range">0</object>
+	<object name="Splash">0</object>
+	<object name="Spray">0</object>
+	</weapon>
+	
+		<!--  Matches  -->
+	<weapon>
+	<object name="Name">Matches</object>
+	<object name="Type">Other</object>
+	<object name="Ammo">3</object>
+	<object name="Clips">0</object>
+	<object name="Damage">0</object>
+	<object name="Fire_Rate">0</object>
+	<object name="Range">0</object>
+	<object name="Splash">0</object>
+	<object name="Spray">0</object>
+	</weapon>
+	
+		<!--  Treasure  -->
+	<weapon>
+	<object name="Name">Treasure</object>
+	<object name="Type">Objective</object>
+	<object name="Ammo">0</object>
+	<object name="Clips">0</object>
+	<object name="Damage">0</object>
+	<object name="Fire_Rate">0</object>
+	<object name="Range">0</object>
+	<object name="Splash">0</object>
+	<object name="Spray">0</object>
+	</weapon>
+	
+		<!--  Artifact  Clue_1  -->
+	<weapon>
+	<object name="Name">Heavy Artifact</object>
+	<object name="Type">Objective</object>
+	<object name="Ammo">0</object>
+	<object name="Clips">0</object>
+	<object name="Damage">0</object>
+	<object name="Fire_Rate">0</object>
+	<object name="Range">0</object>
+	<object name="Splash">0</object>
+	<object name="Spray">0</object>
+	</weapon>
+	
+</weapon_stats>	

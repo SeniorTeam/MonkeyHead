@@ -1,0 +1,13 @@
+-Fix camera bug
+
+-Implement temple 1
+  -Allow player to walk up slant or stairs
+
+-Player can see objective
+  - possibly text
+
+-Add enemy
+  - make work with at least first player
+
+
+-Players spawn in currect area  (*********Players spawn at home)
