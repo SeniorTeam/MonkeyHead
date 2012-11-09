@@ -98,7 +98,7 @@ public class Damage : MonoBehaviour
 		{
 			if ( c_Hud.HudNumber == 1)
 			{
-				w = w;
+				//w = w;
 				h = h/2;
 			}
 			else
@@ -109,13 +109,13 @@ public class Damage : MonoBehaviour
 		}
 		else if ( NumPlayers == 2)
 		{
-			w = w;
+			//w = w;
 			h = h/2;
 		}
 		else if ( NumPlayers == 1)
 		{
-			w = w;
-			h = h;
+			//w = w;
+			//h = h;
 		}
 		
 		

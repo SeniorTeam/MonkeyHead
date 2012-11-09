@@ -10,9 +10,6 @@ public class MainMenu : MonoBehaviour
 	[SerializeField] GameObject TransparentLayer;
 	[SerializeField] float FadeTime = 1.5f;
 	
-	bool isFadingIn = true;
-	string buttonName;
-	Vector3 normSize, hoverSize;
 	bool[] PlayersActive;
 	bool[] PlayerReady;
 	
@@ -34,13 +31,7 @@ public class MainMenu : MonoBehaviour
 			PlayersActive[i] = false;
 			PlayerReady[i] = false;
 		}
-		
-		buttonName = StartButton.name.ToString();
-		
-		Vector3 scale = StartButton.transform.localScale;
-		normSize = new Vector3 (scale.x, scale.y, scale.z);
-		hoverSize =  new Vector3 (scale.x - .01f , 0, scale.z - .01f);
-		
+	
 		TransColor = TransparentLayer.renderer.material.color;
 		TransColor.a = 1;
 		TransparentLayer.renderer.material.color = TransColor;
@@ -87,7 +78,6 @@ public class MainMenu : MonoBehaviour
 	IEnumerator Fade(bool fadeIn)
 	{
 		int start, end;
-		isFadingIn = fadeIn;
 		
 		if (!fadeIn)
 		{

@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{D46A65ED-87AD-D2D3-0493-4CF8807E7B5A}</ProjectGuid>
+	<ProjectGuid>{3EAF1393-082E-5946-8AD2-C4AB66DC5F3D}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -44,6 +44,61 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\AStar Pathfinding\AIFollow.cs" />
+     <Compile Include="Assets\AStar Pathfinding\AstarPathfindingProject\Core\AI\AIPath.cs" />
+     <Compile Include="Assets\AStar Pathfinding\AstarPathfindingProject\Core\AI\NavmeshController.cs" />
+     <Compile Include="Assets\AStar Pathfinding\AstarPathfindingProject\Core\AI\Seeker.cs" />
+     <Compile Include="Assets\AStar Pathfinding\AstarPathfindingProject\Core\AstarData.cs" />
+     <Compile Include="Assets\AStar Pathfinding\AstarPathfindingProject\Core\AstarMath.cs" />
+     <Compile Include="Assets\AStar Pathfinding\AstarPathfindingProject\Core\AstarPath.cs" />
+     <Compile Include="Assets\AStar Pathfinding\AstarPathfindingProject\Core\BinaryHeap.cs" />
+     <Compile Include="Assets\AStar Pathfinding\AstarPathfindingProject\Core\GraphEditorBase.cs" />
+     <Compile Include="Assets\AStar Pathfinding\AstarPathfindingProject\Core\GraphLoaderHistory\AstarSerialize.cs" />
+     <Compile Include="Assets\AStar Pathfinding\AstarPathfindingProject\Core\GraphLoaderHistory\AstarSerializer3_01.cs" />
+     <Compile Include="Assets\AStar Pathfinding\AstarPathfindingProject\Core\GraphLoaderHistory\AstarSerializer3_04.cs" />
+     <Compile Include="Assets\AStar Pathfinding\AstarPathfindingProject\Core\GraphLoaderHistory\AstarSerializer3_05.cs" />
+     <Compile Include="Assets\AStar Pathfinding\AstarPathfindingProject\Core\GraphLoaderHistory\AstarSerializer3_07.cs" />
+     <Compile Include="Assets\AStar Pathfinding\AstarPathfindingProject\Core\GraphUpdateScene.cs" />
+     <Compile Include="Assets\AStar Pathfinding\AstarPathfindingProject\Core\GraphUpdateShape.cs" />
+     <Compile Include="Assets\AStar Pathfinding\AstarPathfindingProject\Core\Int3.cs" />
+     <Compile Include="Assets\AStar Pathfinding\AstarPathfindingProject\Core\JsonConverters.cs" />
+     <Compile Include="Assets\AStar Pathfinding\AstarPathfindingProject\Core\JsonSerializer.cs" />
+     <Compile Include="Assets\AStar Pathfinding\AstarPathfindingProject\Core\MultithreadClasses.cs" />
+     <Compile Include="Assets\AStar Pathfinding\AstarPathfindingProject\Core\Node.cs" />
+     <Compile Include="Assets\AStar Pathfinding\AstarPathfindingProject\Core\NodeLink.cs" />
+     <Compile Include="Assets\AStar Pathfinding\AstarPathfindingProject\Core\astarclasses.cs" />
+     <Compile Include="Assets\AStar Pathfinding\AstarPathfindingProject\Generators\Base.cs" />
+     <Compile Include="Assets\AStar Pathfinding\AstarPathfindingProject\Generators\GridGenerator.cs" />
+     <Compile Include="Assets\AStar Pathfinding\AstarPathfindingProject\Generators\NavMeshGenerator.cs" />
+     <Compile Include="Assets\AStar Pathfinding\AstarPathfindingProject\Generators\NodeClasses\GridNode.cs" />
+     <Compile Include="Assets\AStar Pathfinding\AstarPathfindingProject\Generators\NodeClasses\MeshNode.cs" />
+     <Compile Include="Assets\AStar Pathfinding\AstarPathfindingProject\Generators\PointGenerator.cs" />
+     <Compile Include="Assets\AStar Pathfinding\AstarPathfindingProject\Generators\Utilities\BBTree.cs" />
+     <Compile Include="Assets\AStar Pathfinding\AstarPathfindingProject\Generators\Utilities\Huffman.cs" />
+     <Compile Include="Assets\AStar Pathfinding\AstarPathfindingProject\Generators\Utilities\NavMeshRenderer.cs" />
+     <Compile Include="Assets\AStar Pathfinding\AstarPathfindingProject\Generators\Utilities\ObjImporter.cs" />
+     <Compile Include="Assets\AStar Pathfinding\AstarPathfindingProject\Modifiers\AlternativePath.cs" />
+     <Compile Include="Assets\AStar Pathfinding\AstarPathfindingProject\Modifiers\FunnelModifier.cs" />
+     <Compile Include="Assets\AStar Pathfinding\AstarPathfindingProject\Modifiers\Modifiers.cs" />
+     <Compile Include="Assets\AStar Pathfinding\AstarPathfindingProject\Modifiers\RaycastModifier.cs" />
+     <Compile Include="Assets\AStar Pathfinding\AstarPathfindingProject\Modifiers\SimpleSmoothModifier.cs" />
+     <Compile Include="Assets\AStar Pathfinding\AstarPathfindingProject\Modifiers\StartEndModifier.cs" />
+     <Compile Include="Assets\AStar Pathfinding\AstarPathfindingProject\Pathfinders\CleanupPath65K.cs" />
+     <Compile Include="Assets\AStar Pathfinding\AstarPathfindingProject\Pathfinders\Path.cs" />
+     <Compile Include="Assets\AStar Pathfinding\AstarPathfindingProject\Utilities\AstarProfiler.cs" />
+     <Compile Include="Assets\AStar Pathfinding\AstarPathfindingProject\Utilities\Checksum.cs" />
+     <Compile Include="Assets\AStar Pathfinding\AstarPathfindingProject\Utilities\DotNetReplacements.cs" />
+     <Compile Include="Assets\AStar Pathfinding\AstarPathfindingProject\Utilities\GraphUpdateUtilities.cs" />
+     <Compile Include="Assets\AStar Pathfinding\AstarPathfindingProject\Utilities\LockFreeStack.cs" />
+     <Compile Include="Assets\AStar Pathfinding\AstarPathfindingProject\Utilities\ObjExporter.cs" />
+     <Compile Include="Assets\AStar Pathfinding\AstarPathfindingProject\Utilities\Parallel.cs" />
+     <Compile Include="Assets\AStar Pathfinding\AstarPathfindingProject\Utilities\SizeProfiler.cs" />
+     <Compile Include="Assets\AStar Pathfinding\AstarPathfindingProject\Utilities\UnityReferenceHelper.cs" />
+     <Compile Include="Assets\AStar Pathfinding\AstarPathfindingProject\changelog.cs" />
+     <Compile Include="Assets\AStar Pathfinding\DoorController.cs" />
+     <Compile Include="Assets\AStar Pathfinding\DynamicGridObstacle.cs" />
+     <Compile Include="Assets\AStar Pathfinding\MineBotAI.cs" />
+     <Compile Include="Assets\AStar Pathfinding\ShadowAlign.cs" />
      <Compile Include="Assets\Game\Scripts\Enemy\Enemy.cs" />
      <Compile Include="Assets\Game\Scripts\Enemy\Enemy_Sight.cs" />
      <Compile Include="Assets\Game\Scripts\Enemy\Tweek.cs" />
@@ -92,13 +147,13 @@
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\NoiseEffectShaderRGB.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\SeparableWeightedBlurDof34.shader" />
-     <None Include="Assets\Standard Assets\AStar Pathfinding\AstarPathfindingProject\Editor\EditorAssets\Materials\Navmesh2.shader" />
+     <None Include="Assets\AStar Pathfinding\AstarPathfindingProject\Editor\EditorAssets\Materials\Navmesh2.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ShowAlphaChannel.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GlowConeTap.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\SunShaftsComposite.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ColorCorrectionCurves.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\NFAA.shader" />
-     <None Include="Assets\Standard Assets\AStar Pathfinding\AstarPathfindingProject\Plugins\DotNetZip\License.txt" />
+     <None Include="Assets\AStar Pathfinding\AstarPathfindingProject\Plugins\DotNetZip\License.txt" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\VignetteShader.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\DepthOfFieldScatter.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\MotionBlur.shader" />
@@ -112,8 +167,8 @@
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\FisheyeShader.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Contrast Stretch\Apply.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\frag_ao.cginc" />
-     <None Include="Assets\Standard Assets\AStar Pathfinding\AstarPathfindingProject\Editor\EditorAssets\Materials\Navmesh.shader" />
-     <None Include="Assets\Standard Assets\AStar Pathfinding\AstarPathfindingProject\Plugins\dependencies.txt" />
+     <None Include="Assets\AStar Pathfinding\AstarPathfindingProject\Editor\EditorAssets\Materials\Navmesh.shader" />
+     <None Include="Assets\AStar Pathfinding\AstarPathfindingProject\Plugins\dependencies.txt" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\DepthOfField34.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\TiltShift.shader" />
      <None Include="Assets\Game\Scripts\Weapons\WeaponStats.xml" />
@@ -132,7 +187,7 @@
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\MultiPassHollywoodFlares.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\BlurEffectConeTaps.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\DLAA.shader" />
-     <None Include="Assets\Standard Assets\AStar Pathfinding\AstarPathfindingProject\link.xml" />
+     <None Include="Assets\AStar Pathfinding\AstarPathfindingProject\link.xml" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\SeparableBlur.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ColorCorrectionEffect.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GrayscaleEffect.shader" />
@@ -142,11 +197,11 @@
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Contrast Stretch\Adaptation.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\NoiseAndGrain.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\VignettingShader.shader" />
-     <None Include="Assets\Standard Assets\AStar Pathfinding\AstarPathfindingProject\Plugins\JsonFx\License.txt" />
+     <None Include="Assets\AStar Pathfinding\AstarPathfindingProject\Plugins\JsonFx\License.txt" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Tonemapper.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BrightPassFilter.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\FXAA2.shader" />
-     <None Include="Assets\Standard Assets\AStar Pathfinding\AstarPathfindingProject\Plugins\JsonFx\Readme.txt" />
+     <None Include="Assets\AStar Pathfinding\AstarPathfindingProject\Plugins\JsonFx\Readme.txt" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\LensFlareCreate.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\EdgeDetectNormals.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\PrepareSunShaftsBlur.shader" />
@@ -160,15 +215,15 @@
  <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
  <Reference Include="Ionic.Zip.Reduced">
- <HintPath>Assets\Standard Assets\AStar Pathfinding\AstarPathfindingProject\Plugins\DotNetZip\Ionic.Zip.Reduced.dll</HintPath>
+ <HintPath>Assets\AStar Pathfinding\AstarPathfindingProject\Plugins\DotNetZip\Ionic.Zip.Reduced.dll</HintPath>
  </Reference>
  <Reference Include="JsonFx.Json">
- <HintPath>Assets\Standard Assets\AStar Pathfinding\AstarPathfindingProject\Plugins\JsonFx\JsonFx.Json.dll</HintPath>
+ <HintPath>Assets\AStar Pathfinding\AstarPathfindingProject\Plugins\JsonFx\JsonFx.Json.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">
-      <Project>{E587AF13-F47D-811A-D0BD-0DFD3208191F}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
+      <Project>{DD9CCFDB-76A5-AC3B-C4C6-5A1207033D12}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

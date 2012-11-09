@@ -311,8 +311,8 @@ public class Game : MonoBehaviour
 	
 	void ChangeHUD(HUD hud, Rect view, Vector3 pos, Vector2 dim)
 	{
-		float width = dim.x;
-		float height = dim.y;
+		//float width = dim.x;
+		//float height = dim.y;
 		
 		foreach (Transform _trans in hud.transform)
 		{

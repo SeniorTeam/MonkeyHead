@@ -75,9 +75,6 @@ public class Enemy: AIPath
 	
 	void MoveTowardsTarget()
 	{
-		//Get velocity in world-space
-		Vector3 velocity;
-		
 		if (canMove) 
 		{
 			//Calculate desired velocity
@@ -105,12 +102,6 @@ public class Enemy: AIPath
 				controller.SimpleMove (dir);
 			else
 				Debug.LogWarning ("No NavmeshController or CharacterController attached to GameObject");
-			
-			velocity = controller.velocity;
-		} 
-		else 
-		{
-			velocity = Vector3.zero;
 		}		
 	}
 	

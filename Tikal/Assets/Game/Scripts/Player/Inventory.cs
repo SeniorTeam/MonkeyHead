@@ -364,7 +364,6 @@ public class Inventory : MonoBehaviour
 				_weapon.WeaponDrop(gameObject.transform);			// drop current weapon attributes
 				inventory.Remove(_weapon);							// remove from inventory
 				break;
-				yield return null;
 			}
 			
 			yield return null;

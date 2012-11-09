@@ -15,7 +15,6 @@ public abstract class Weapon : MonoBehaviour
 	public bool Equipped;
 	public bool[] inPlayerRadius;
 	public bool Active;
-	bool Attacking;
 	float distanceToPickUp = 2.5f;
 	string pickup;
 	
@@ -228,12 +227,10 @@ public abstract class Weapon : MonoBehaviour
 	
 	public virtual void StartAttack(GameObject EyeLevel, GameObject Hud)
 	{
-		Attacking = true;
 	}
 	
 	public virtual void EndAttack()
 	{
-		Attacking = false;
 	}
 	
 	public virtual void ReloadWeapon()
