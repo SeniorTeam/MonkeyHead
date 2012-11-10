@@ -22,7 +22,7 @@ public class Game : MonoBehaviour
 	
 	void Awake () 
 	{
-		//PlayerPrefs.SetInt("NumberOfPlayers", 4);
+		PlayerPrefs.SetInt("NumberOfPlayers", 4);
 		
 		//Screen.showCursor = false;	
 		
@@ -70,6 +70,7 @@ public class Game : MonoBehaviour
 			hud.tag = "Hud";
 			hud.layer = 8 + num; // Hud_1 starts at layer 9, 8+1 = 9. 
 			hud.GetComponent<HUD>().HudNumber = num;
+			hud.GetComponent<HUD>().PlayerName = pName.ToString();
 			//hud.GetComponentInChildren<CLSRadar>().Player = pName.ToString();
 			
 			#endregion
@@ -173,6 +174,7 @@ public class Game : MonoBehaviour
 		hud.tag = "Hud";
 		hud.layer = 8 + num; // Hud_1 starts at layer 9, 8+1 = 9. 
 		hud.GetComponent<HUD>().HudNumber = num;
+		hud.GetComponent<HUD>().PlayerName = pName.ToString();
 		//hud.GetComponentInChildren<CLSRadar>().Player = pName.ToString();
 		
 		#endregion

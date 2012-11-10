@@ -135,9 +135,12 @@ public class Inventory : MonoBehaviour
 	{
 		if (c_Game.StartGame && foundParent)
 		{
-			WeaponInput_Controller();
-			HoldWeapon();
-			HudUpdate ();
+			if ( Player.GetComponent<Player_Info>().ControllerUse)
+			{
+				WeaponInput_Controller();
+				HoldWeapon();
+				HudUpdate ();
+			}
 		}
 	}
 	
@@ -269,6 +272,7 @@ public class Inventory : MonoBehaviour
 		c_HudInventory.WeaponAdd(_weapon.GetComponentInChildren<Weapon>().HudMaterial, inventory.Count());
 		
 		_weapon.GetComponentInChildren<Weapon>().Active = true;					// Make weapon active, currently in use
+		_weapon.GetComponentInChildren<Weapon>().Equipped = true;				// Make weapon equipped
 		_weapon.GetComponentInChildren<Weapon>().ToggleWeaponRenderer(true); 	// turn on its renderer
 			
 		_weapon.GetComponentInChildren<Weapon>().WeaponAdd(PlayerNumber); 					// weapon added attributes
@@ -361,7 +365,7 @@ public class Inventory : MonoBehaviour
 		{
 			foreach (Weapon _weapon in inventory)
 			{
-				_weapon.WeaponDrop(gameObject.transform);			// drop current weapon attributes
+				_weapon.HolderDied(gameObject.transform);			// drop current weapon attributes
 				inventory.Remove(_weapon);							// remove from inventory
 				break;
 			}
@@ -614,7 +618,7 @@ public class Inventory : MonoBehaviour
 	void OnGUI()
 	{
 		if (c_Game.StartGame && foundParent)
-		{
+		{	
 			GUI.Label(new Rect(HUD_Health_Coords.x, HUD_Health_Coords.y, 300,20), "Health: " + Player.GetComponent<Player_Info>().GetPlayersHealth());
 		}
 	}

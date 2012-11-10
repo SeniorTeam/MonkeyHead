@@ -86,8 +86,11 @@ public class MouseLook : MonoBehaviour
 	{
 		if (c_Game.StartGame && initComplete)
 		{
-			CameraController();
-			CrossHair();
+			if (gameObject.GetComponent<Player_Info>().ControllerUse)
+			{
+				CameraController();
+				CrossHair();
+			}
 		}
 	}
 	

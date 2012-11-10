@@ -28,6 +28,9 @@ public class Gun : Weapon
 	float sprayCount;
 	bool HUDOn = true;
 	
+	const float DEATH_TIME = 30;
+	float deathTimer;
+	
 	public override void Initialize()
 	{
 		//GunShotSpark.GetComponent<ParticleSystem>().Stop();
@@ -36,7 +39,7 @@ public class Gun : Weapon
 		
 		//_ammunition = transform.GetComponent<Ammunition>();
 		//_ammunition.InitializeHudAmmo(_Ammo, _ClipSize);
-		
+		deathTimer = DEATH_TIME;
 		audio.clip = GunShotSound;
 		AmmunitionLeft = _ClipSize;
 	}
@@ -71,6 +74,16 @@ public class Gun : Weapon
 	void Update()
 	{
 		SparkUpdate();
+		
+		if (!Equipped)
+		{
+			if (deathTimer > 0)	
+				deathTimer -= Time.deltaTime;
+			else
+				Destroy(gameObject);
+		}
+		else
+			deathTimer = DEATH_TIME;	
 	}
 	
 	void SparkUpdate()
@@ -178,12 +191,8 @@ public class Gun : Weapon
 					}
 					case "Player":
 					{
-						string hudName = found.gameObject.GetComponent<Player_Info>().PlayerHUD;
-						GameObject playersHud = GameObject.Find(hudName);
-					
 						if (found.GetComponent<Player_Info>().isPlayerAlive)
 						{
-							playersHud.GetComponentInChildren<Damage>().ApplyHit();
 							Hud.GetComponentInChildren<CrossHair>().HitTarget();
 							found.GetComponent<Player_Info>().ApplyDamage(_Damage);
 						}

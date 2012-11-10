@@ -8,6 +8,11 @@ public class Enemy_Sight : MonoBehaviour
 	[SerializeField] GameObject Head;
 	[SerializeField] AnimationClip[] HeadAnimation;
 	
+	const float EnemyRangeDistance = 20;
+	const float EnemyRangeHeight = 3;
+	const float AttackRangeDistance = 2;
+	const float AttackRangeHeight = 3;
+	
 	bool canAttack = true;
 	
 	List<Player_Info> ListOfPlayers = new List<Player_Info>();
@@ -60,7 +65,7 @@ public class Enemy_Sight : MonoBehaviour
 			//Debug.Log("Player != null");
 			Vector3 pos = TargetPlayer.transform.position;
 			
-			if ( isPlayerInRange(pos.y, DistanceForm(pos.x, pos.z), 4.0f) )
+			if ( isPlayerInRange(pos.y, DistanceForm(pos.x, pos.z), AttackRangeHeight, AttackRangeDistance) )
 			{
 				if (canAttack)
 					StartCoroutine( EnemyAttack() );
@@ -88,11 +93,14 @@ public class Enemy_Sight : MonoBehaviour
 	
 	void EnemyDetectionOfPlayer(GameObject player)
 	{
-		if (isPlayerInSight(player))
+		if (isPlayerInHeight(player.transform.position.y, EnemyRangeHeight) )
 		{
-			DetermineHeadLookAt(true);
-			Vector3 forward = Head.transform.TransformDirection(Vector3.forward) * sightDistance;
-			Debug.DrawRay (Head.transform.position, forward, Color.red);
+			if (isPlayerInSight(player))
+			{
+				DetermineHeadLookAt(true);
+				Vector3 forward = Head.transform.TransformDirection(Vector3.forward) * sightDistance;
+				Debug.DrawRay (Head.transform.position, forward, Color.red);
+			}
 		}
 		else
 		{
@@ -129,42 +137,6 @@ public class Enemy_Sight : MonoBehaviour
 			return false;
 		else
 			return true;
-	}
-	
-	bool isPlayerInRange(float y, float xz, float distance)
-	{
-		bool inRange = true;
-		
-		if ( y > (Mathf.Abs(transform.position.y) + distance) )
-		{
-			//Debug.Log("Y: " + y + "   D: " + (Mathf.Abs(transform.position.y) + distance));
-			inRange = false;
-		}
-		if (xz > distance)
-		{
-			//Debug.Log("XZ: " + xz + "   D: " + distance);
-			inRange = false;
-		}
-					
-		return inRange;					
-	}
-				
-	private float DistanceForm (float player_x, float player_z)
-	{
-		float x1 = player_x;
-		float x2 = transform.position.x;
-		float y1 = player_z;
-		float y2 = transform.position.z;
-		
-		float distance;
-		
-		float xFactor = Mathf.Pow( (x2 - x1), 2);
-		float yFactor = Mathf.Pow( (y2 - y1), 2);
-		
-		distance = Mathf.Sqrt( (xFactor + yFactor) );
-		distance = Mathf.Abs(distance);
-		
-		return distance;
 	}
 	
 	IEnumerator CanHeadSearch()
@@ -216,7 +188,6 @@ public class Enemy_Sight : MonoBehaviour
 		
 	}
 	
-	const float EnemyRangeDistance = 20;
 	void CheckPlayersDistances()
 	{
 		ListOfPlayers.Clear();
@@ -225,7 +196,7 @@ public class Enemy_Sight : MonoBehaviour
 		{
 			Vector3 pos = p.transform.position;
 			
-			if ( isPlayerInRange(pos.y, DistanceForm(pos.x, pos.z), EnemyRangeDistance) )
+			if ( isPlayerInRange(pos.y, DistanceForm(pos.x, pos.z), EnemyRangeHeight, EnemyRangeDistance) )
 				ListOfPlayers.Add(p);
 		}
 		
@@ -258,6 +229,50 @@ public class Enemy_Sight : MonoBehaviour
 		canCheck = true;
 	}
 	
+	
+	#region Distance/Height Calculations
+	
+	bool isPlayerInRange(float y, float xz, float height, float distance)
+	{
+		bool inRange = true;
+		float range = (Mathf.Abs(y)) - (Mathf.Abs(transform.position.y));
+		
+		if (xz > distance)
+			inRange = false;
+		if ( height < Mathf.Abs(range) )
+			inRange = false;
+			
+		return inRange;					
+	}
+	
+	bool isPlayerInHeight( float y, float height )
+	{
+		bool inRange = true;
+		float range = (Mathf.Abs(y)) - (Mathf.Abs(transform.position.y));
+		
+		if ( height < Mathf.Abs(range) )
+			inRange = false;
+			
+		return inRange;		
+	}
+				
+	private float DistanceForm (float player_x, float player_z)
+	{
+		float x1 = player_x;
+		float x2 = transform.position.x;
+		float y1 = player_z;
+		float y2 = transform.position.z;
+		
+		float distance;
+		
+		float xFactor = Mathf.Pow( (x2 - x1), 2);
+		float yFactor = Mathf.Pow( (y2 - y1), 2);
+		
+		distance = Mathf.Sqrt( (xFactor + yFactor) );
+		distance = Mathf.Abs(distance);
+		
+		return distance;
+	}
 
 	#region Barycentric Technique
 	// Barycentric Technique
@@ -308,6 +323,10 @@ public class Enemy_Sight : MonoBehaviour
 		
 		return inArea;
 	}
+	
+	
+	#endregion
+	
 	#endregion
 	
 	

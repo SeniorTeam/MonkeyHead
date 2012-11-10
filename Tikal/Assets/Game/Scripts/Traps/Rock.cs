@@ -23,7 +23,7 @@ public class Rock : MonoBehaviour
 		if (hit.tag == "Player")
 		{
 			if (RocksActive)
-				hit.GetComponent<Player_Info>().PlayerDied();
+				hit.GetComponent<Player_Info>().ApplyDamage(100);
 		}
 	}
 

@@ -94,7 +94,11 @@ public abstract class Weapon : MonoBehaviour
 	
 	IEnumerator PlayerDistance(Player_Info Player)
 	{
-		if ( Player.gameObject != null)
+		if (Player == null)
+		{
+			//Player Died
+		}
+		else if ( Player.gameObject != null)
 		{
 			Vector3 pPos = Player.transform.position;
 			Vector3 wPos = transform.position;
@@ -164,7 +168,6 @@ public abstract class Weapon : MonoBehaviour
 	{		
 		GameObject inv = Player.GetComponentInChildren<Inventory>().gameObject;
 		inv.GetComponent<Inventory>().WeaponPickUpText.guiText.text = text;
-		
 	}
 	
 	private bool isPlayerInDistance(float distance)
@@ -236,5 +239,11 @@ public abstract class Weapon : MonoBehaviour
 	public virtual void ReloadWeapon()
 	{
 		
+	}
+	
+	public void HolderDied(Transform inventory)
+	{
+		inventory.GetComponent<Inventory>().WeaponPickUpText.guiText.text = "";
+		WeaponDrop(inventory);
 	}
 }

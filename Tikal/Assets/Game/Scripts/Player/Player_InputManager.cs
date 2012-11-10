@@ -29,8 +29,15 @@ public class Player_InputManager : MonoBehaviour
 	{
 		if (c_Game.StartGame)
 		{
-			// Get the input vector from kayboard or analog stick
-			PlayerMovement_Controller();
+			if (GetComponent<Player_Info>().ControllerUse)
+			{
+				// Get the input vector from kayboard or analog stick
+				PlayerMovement_Controller();
+			}
+			else
+			{
+				motor.inputMoveDirection = new Vector3(0,0,0);
+			}
 		}
 	}
 

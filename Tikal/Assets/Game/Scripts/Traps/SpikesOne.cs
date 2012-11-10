@@ -7,7 +7,7 @@ public class SpikesOne : MonoBehaviour
 	{
 		if (hit.tag == "Player")
 		{
-			hit.GetComponent<Player_Info>().PlayerDied();
+			hit.GetComponent<Player_Info>().ApplyDamage(100);
 		}
 	}
 	

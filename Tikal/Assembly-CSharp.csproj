@@ -101,11 +101,13 @@
      <Compile Include="Assets\AStar Pathfinding\ShadowAlign.cs" />
      <Compile Include="Assets\Game\Scripts\Enemy\Enemy.cs" />
      <Compile Include="Assets\Game\Scripts\Enemy\Enemy_Sight.cs" />
-     <Compile Include="Assets\Game\Scripts\Enemy\Tweek.cs" />
      <Compile Include="Assets\Game\Scripts\Hud\CrossHair.cs" />
      <Compile Include="Assets\Game\Scripts\Hud\Damage.cs" />
      <Compile Include="Assets\Game\Scripts\Hud\HUD.cs" />
      <Compile Include="Assets\Game\Scripts\Hud\HudInventory.cs" />
+     <Compile Include="Assets\Game\Scripts\Hud\Radar.cs" />
+     <Compile Include="Assets\Game\Scripts\Hud\ScreenResolution.cs" />
+     <Compile Include="Assets\Game\Scripts\Hud\SplitScreen_Cameras.cs" />
      <Compile Include="Assets\Game\Scripts\Jail Cell\CellDoorOpen.cs" />
      <Compile Include="Assets\Game\Scripts\Jail Cell\JailCellCamera.cs" />
      <Compile Include="Assets\Game\Scripts\Lights\LightFlicker.cs" />
@@ -117,9 +119,7 @@
      <Compile Include="Assets\Game\Scripts\Other\CLSRadar.cs" />
      <Compile Include="Assets\Game\Scripts\Other\Game.cs" />
      <Compile Include="Assets\Game\Scripts\Other\Particle_AutoDestruct.cs" />
-     <Compile Include="Assets\Game\Scripts\Other\Radar.cs" />
-     <Compile Include="Assets\Game\Scripts\Other\ScreenResolution.cs" />
-     <Compile Include="Assets\Game\Scripts\Other\SplitScreen_Cameras.cs" />
+     <Compile Include="Assets\Game\Scripts\Other\Radar_1.cs" />
      <Compile Include="Assets\Game\Scripts\Player\CharacterMotor.cs" />
      <Compile Include="Assets\Game\Scripts\Player\DoFAutoFocus.cs" />
      <Compile Include="Assets\Game\Scripts\Player\HeadMovement.cs" />
@@ -167,6 +167,7 @@
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\FisheyeShader.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Contrast Stretch\Apply.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\frag_ao.cginc" />
+     <None Include="Assets\Standard Assets\Shaders\alpha_2sided.shader" />
      <None Include="Assets\AStar Pathfinding\AstarPathfindingProject\Editor\EditorAssets\Materials\Navmesh.shader" />
      <None Include="Assets\AStar Pathfinding\AstarPathfindingProject\Plugins\dependencies.txt" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\DepthOfField34.shader" />
@@ -174,18 +175,26 @@
      <None Include="Assets\Game\Scripts\Weapons\WeaponStats.xml" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\SSAOShader.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ConvertDepth.shader" />
+     <None Include="Assets\Standard Assets\Shaders\WaterShader.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ColorCorrectionCurvesSimple.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\NoiseEffectShaderYUV.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GlowEffectDownsample.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\CreaseApply.shader" />
+     <None Include="Assets\Standard Assets\Shaders\Vegetation-TwoPassUnlit.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ChromaticAberrationShader.shader" />
+     <None Include="Assets\Standard Assets\Shaders\Particle Alpha Blend.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GlobalFog.shader" />
+     <None Include="Assets\Standard Assets\Shaders\Resources\FastTreeCreatorLeaves.shader" />
+     <None Include="Assets\Standard Assets\Shaders\Resources\TreeVertexLit.cginc" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Contrast Stretch\Luminance.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ColorCorrectionSelective.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\Bokeh34.shader" />
+     <None Include="Assets\Standard Assets\Shaders\Resources\FastTreeCreatorLeavesOptimized.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\SeparableBlurPlus.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\MultiPassHollywoodFlares.shader" />
+     <None Include="Assets\Standard Assets\Shaders\Resources\Tree.cginc" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\BlurEffectConeTaps.shader" />
+     <None Include="Assets\Standard Assets\Shaders\BillboardTree.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\DLAA.shader" />
      <None Include="Assets\AStar Pathfinding\AstarPathfindingProject\link.xml" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\SeparableBlur.shader" />
@@ -194,7 +203,9 @@
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\SepiaToneEffect.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\TwirlEffect.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\VortexEffect.shader" />
+     <None Include="Assets\Standard Assets\Shaders\MeshTerrain4Splats.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Contrast Stretch\Adaptation.shader" />
+     <None Include="Assets\Standard Assets\Shaders\Alpha-Cancel.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\NoiseAndGrain.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\VignettingShader.shader" />
      <None Include="Assets\AStar Pathfinding\AstarPathfindingProject\Plugins\JsonFx\License.txt" />
@@ -203,6 +214,7 @@
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\FXAA2.shader" />
      <None Include="Assets\AStar Pathfinding\AstarPathfindingProject\Plugins\JsonFx\Readme.txt" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\LensFlareCreate.shader" />
+     <None Include="Assets\Standard Assets\Shaders\Glass.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\EdgeDetectNormals.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\PrepareSunShaftsBlur.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\Blend.shader" />
@@ -210,6 +222,7 @@
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\SimpleClear.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\FXAA3Console.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\EdgeDetectX.shader" />
+     <None Include="Assets\Standard Assets\Shaders\Particle Multiply.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\FXAAPreset2.shader" />
  <Reference Include="Ionic.Zip.Reduced">
  <HintPath>Assets\AStar Pathfinding\AstarPathfindingProject\Plugins\DotNetZip\Ionic.Zip.Reduced.dll</HintPath>
