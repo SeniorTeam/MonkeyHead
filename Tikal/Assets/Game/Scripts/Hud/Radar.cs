@@ -5,7 +5,6 @@ public class Radar : MonoBehaviour
 {
 	[SerializeField] Camera RadarCamera;
 	[SerializeField] GameObject[] RadarComponents;
-	[SerializeField] int CameraHeight;
 	public GameObject Player;
 	
 	HUD _Hud;
@@ -124,7 +123,7 @@ public class Radar : MonoBehaviour
 			Vector3 pos = Player.transform.position;
 			
 			transform.position = new Vector3 (pos.x, transform.position.y , pos.z);
-			RadarCamera.transform.position = new Vector3 (pos.x, CameraHeight , pos.z);
+			RadarCamera.transform.position = new Vector3 (pos.x, RadarCamera.transform.position.y , pos.z);
 		}
 	}
 }

@@ -22,7 +22,7 @@ public class Game : MonoBehaviour
 	
 	void Awake () 
 	{
-		PlayerPrefs.SetInt("NumberOfPlayers", 4);
+		//PlayerPrefs.SetInt("NumberOfPlayers", 4);
 		
 		//Screen.showCursor = false;	
 		
