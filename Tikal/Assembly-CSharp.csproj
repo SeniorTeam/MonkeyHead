@@ -105,7 +105,8 @@
      <Compile Include="Assets\Game\Scripts\Hud\Damage.cs" />
      <Compile Include="Assets\Game\Scripts\Hud\HUD.cs" />
      <Compile Include="Assets\Game\Scripts\Hud\HudInventory.cs" />
-     <Compile Include="Assets\Game\Scripts\Hud\Radar.cs" />
+     <Compile Include="Assets\Game\Scripts\Hud\Radar\Radar.cs" />
+     <Compile Include="Assets\Game\Scripts\Hud\Radar\RadarBlipGenerator.cs" />
      <Compile Include="Assets\Game\Scripts\Hud\ScreenResolution.cs" />
      <Compile Include="Assets\Game\Scripts\Hud\SplitScreen_Cameras.cs" />
      <Compile Include="Assets\Game\Scripts\Jail Cell\CellDoorOpen.cs" />

@@ -307,6 +307,8 @@ public class Game : MonoBehaviour
 			if (_trans.tag == "MainCamera")
 			{
 				_trans.camera.rect = view; 
+				 //~( (1 << 18) | (1 << 19) | (1 << 20) | (1 << 21));
+				//_trans.camera.cullingMask = ~(1 << 18);
 			}
 		}
 	}

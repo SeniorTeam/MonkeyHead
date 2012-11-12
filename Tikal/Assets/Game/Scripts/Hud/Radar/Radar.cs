@@ -99,7 +99,21 @@ public class Radar : MonoBehaviour
 			r.layer = CML;
 		}
 		
-		RadarCamera.cullingMask = 1 << CML;
+		#region Blip Layers
+		// Layer 18 is Player 1 Enemy Blip
+		// Layer 19 is Player 2 Enemy Blip
+		// Layer 20 is Player 3 Enemy Blip
+		// Layer 21 is Player 4 Enemy Blip
+		#endregion
+		
+		if (_Hud.HudNumber == 1)
+			RadarCamera.cullingMask = 1 << CML | 1 << 19 | 1 << 20 | 1 << 21;
+		if (_Hud.HudNumber == 2)
+			RadarCamera.cullingMask = 1 << CML | 1 << 18 | 1 << 20 | 1 << 21;
+		if (_Hud.HudNumber == 3)
+			RadarCamera.cullingMask = 1 << CML | 1 << 18 | 1 << 19 | 1 << 21;
+		if (_Hud.HudNumber == 4)
+			RadarCamera.cullingMask = 1 << CML | 1 << 18 | 1 << 19 | 1 << 20;
 		
 	}
 	
@@ -121,9 +135,12 @@ public class Radar : MonoBehaviour
 		else
 		{
 			Vector3 pos = Player.transform.position;
+			Vector3 rot = Player.transform.eulerAngles;
 			
 			transform.position = new Vector3 (pos.x, transform.position.y , pos.z);
+			
 			RadarCamera.transform.position = new Vector3 (pos.x, RadarCamera.transform.position.y , pos.z);
+			RadarCamera.transform.eulerAngles = new Vector3 (90, rot.y , 0);
 		}
 	}
 }

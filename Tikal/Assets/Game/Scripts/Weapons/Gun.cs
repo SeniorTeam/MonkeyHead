@@ -6,6 +6,8 @@ using System.Collections.Generic;
 
 public class Gun : Weapon 
 {
+	RadarBlipGenerator _RadarBlipGen;
+	
 	[SerializeField] GameObject BulletSpawnPoint;
 	[SerializeField] GameObject Bullet;
 	[SerializeField] GameObject GunShotSpark;
@@ -42,15 +44,17 @@ public class Gun : Weapon
 		deathTimer = DEATH_TIME;
 		audio.clip = GunShotSound;
 		AmmunitionLeft = _ClipSize;
+		
+		_RadarBlipGen = _Game.GetComponent<RadarBlipGenerator>();
 	}
 
-	public override void StartAttack (GameObject eye, GameObject hud)
+	public override void StartAttack (GameObject eye, GameObject hud, GameObject thePlayer)
 	{
-		base.StartAttack (eye, hud);
+		base.StartAttack (eye, hud, thePlayer);
 		
 		EyeLevel = eye;
 		Hud = hud;
-		PlayerShooting();
+		PlayerShooting(thePlayer);
 	}
 	
 	public override void EndAttack ()
@@ -110,7 +114,7 @@ public class Gun : Weapon
 	}
 	
 	#region Controls
-	void PlayerShooting()
+	void PlayerShooting(GameObject thePlayer)
 	{
 		if (CanShoot)
 		{
@@ -126,7 +130,13 @@ public class Gun : Weapon
 					//audio.Play();
 					audio.PlayOneShot(GunShotSound);
 					//CreateBullet();
+					
+					Player_Info pInfo = thePlayer.GetComponent<Player_Info>();
+					
+					
+					_RadarBlipGen.CreateBlips(pInfo.PlayerNumber, pInfo.PlayerID);
 					StartCoroutine(FireRateTime());
+					
 				}
 			}
 			else

@@ -544,7 +544,7 @@ public class Inventory : MonoBehaviour
 					break;
 				}
 					
-				_weapon.StartAttack(EyeLevel, Hud);	
+				_weapon.StartAttack(EyeLevel, Hud, Player);	
 				RightArm.animation.clip = _weapon.wAnimation;
 				RightArm.animation.Play();	// use attack animation for current weapon
 			}

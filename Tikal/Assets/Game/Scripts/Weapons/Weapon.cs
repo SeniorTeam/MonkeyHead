@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public abstract class Weapon : MonoBehaviour 
 {	
 	Game c_Game;
-	GameObject _Game;
+	public GameObject _Game;
 	WeaponManager _manager;
 	GameObject _WeaponManager;
 	public string WeaponName;
@@ -228,7 +228,7 @@ public abstract class Weapon : MonoBehaviour
 		}
 	}
 	
-	public virtual void StartAttack(GameObject EyeLevel, GameObject Hud)
+	public virtual void StartAttack(GameObject EyeLevel, GameObject Hud, GameObject thePlayer)
 	{
 	}
 	
