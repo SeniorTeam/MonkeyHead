@@ -1,0 +1,20 @@
+# This file uses centimeters as units for non-parametric coordinates.
+
+mtllib floor_low.mtl
+g default
+v 0.000000 -0.000000 6.000000
+v 6.000000 -0.000000 6.000000
+v 0.000000 0.000000 0.000000
+v 6.000000 0.000000 0.000000
+vt 0.000000 0.000000
+vt 1.199997 0.000001
+vt 0.000000 1.000000
+vt 1.199997 0.999999
+vn 0.000000 1.000000 0.000000
+vn 0.000000 1.000000 0.000000
+vn 0.000000 1.000000 0.000000
+vn 0.000000 1.000000 0.000000
+s off
+g lowpolyfloor
+usemtl initialShadingGroup
+f 1/1/1 2/2/2 4/4/3 3/3/4
