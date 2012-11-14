@@ -22,7 +22,7 @@ public class Game : MonoBehaviour
 	
 	void Awake () 
 	{
-		//PlayerPrefs.SetInt("NumberOfPlayers", 4);
+		//PlayerPrefs.SetInt("NumberOfPlayers", 1);
 		
 		//Screen.showCursor = false;	
 		
@@ -76,7 +76,7 @@ public class Game : MonoBehaviour
 			#endregion
 			
 			// Create Player
-			GameObject player = Instantiate(Resources.Load("Prefabs/Characters/Player/Player"), new Vector3 (Base[num-1].transform.position.x, 1.1f, Base[num-1].transform.position.z ), Quaternion.identity) as GameObject;
+			GameObject player = Instantiate(Resources.Load("Prefabs/Characters/Player/Player"), new Vector3 (Base[num-1].transform.position.x, 1.4f, Base[num-1].transform.position.z ), Quaternion.identity) as GameObject;
 			
 			// Change Players Parent GameObject Name
 			player.name = pName.ToString();
@@ -198,7 +198,7 @@ public class Game : MonoBehaviour
 		Base[num-1].GetComponentInChildren<SpawnSector>().BasePlayers.Add(player.GetComponentInChildren<Player_Info>());
 		
 		Vector3 SpawnPoint = Base[num-1].GetComponentInChildren<SpawnSector>().FindSpawnLocation();
-		player.transform.position = new Vector3 (SpawnPoint.x, 1.1f, SpawnPoint.z );
+		player.transform.position = new Vector3 (SpawnPoint.x, 1.4f, SpawnPoint.z );
 		
 		#region Player Color
 		for (int i = 0; i < 4; i++)
