@@ -35,7 +35,6 @@ public class Gun : Weapon
 	
 	public override void Initialize()
 	{
-		//GunShotSpark.GetComponent<ParticleSystem>().Stop();
 		
 		base.Initialize();
 		
@@ -109,7 +108,6 @@ public class Gun : Weapon
 			yield return null;
 		}
 		
-		//GunShotSpark.GetComponent<ParticleSystem>().Stop();
 		yield return null;
 	}
 	
@@ -127,8 +125,8 @@ public class Gun : Weapon
 					_CurrentClip--;
 					sprayCount = _Spray;
 					GunShoot();
-					//audio.Play();
-					audio.PlayOneShot(GunShotSound);
+					
+					//audio.PlayOneShot(GunShotSound);
 					//CreateBullet();
 					
 					Player_Info pInfo = thePlayer.GetComponent<Player_Info>();

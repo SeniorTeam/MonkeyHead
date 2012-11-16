@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Objective : Weapon  
 {
-	[SerializeField] GameObject DropOff;
+	[SerializeField] GameObject[] DropOffs;
 	bool Treasure = true;
 	
 	public override void Initialize()
@@ -15,10 +15,13 @@ public class Objective : Weapon
 	{
 		if (Active && Treasure)
 		{
-			if (hit.gameObject.name == DropOff.name)
+			foreach (GameObject dropoff in DropOffs)
 			{
-				Debug.Log("WIN");
-				Application.LoadLevel("Test_One");
+				if (hit.gameObject.name == dropoff.name)
+				{
+					Debug.Log("WIN");
+					Application.LoadLevel("Level_One");
+				}
 			}
 		}
 	}

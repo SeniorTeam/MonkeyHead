@@ -422,26 +422,26 @@ public class Inventory : MonoBehaviour
 	// Display Inventory
 	IEnumerator Weapon_Inventory()
 	{
-		canDisplay = false;
-		c_HudInventory.DisplayHud();
+//		canDisplay = false;
+//		c_HudInventory.DisplayHud();
+//		
+//		float timer = 1.0f;
+//		while (timer > 0)
+//		{
+//			timer -= Time.deltaTime;
+//			yield return null;
+//		}
+//		
+//		canDisplay = true;
 		
-		float timer = 1.0f;
-		while (timer > 0)
-		{
-			timer -= Time.deltaTime;
-			yield return null;
-		}
-		
-		canDisplay = true;
-		
-		/*Debug.Log("INVENTORY");
+		Debug.Log(Player + " INVENTORY");
 		// Foreach weapon in inventory debug its name
 		foreach (Weapon _weapon in inventory)
 		{
 			Debug.Log (	_weapon.WeaponName.ToString());
 			yield return null;
 		}
-		*/
+		
 		yield return null;
 	}
 	
